@@ -1,0 +1,2 @@
+class CollectiblesController < ApplicationController
+end
