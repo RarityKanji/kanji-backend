@@ -27,6 +27,7 @@ collectible_attributes = [
     description: "A rare, mint condition Superman comic from 1938.",
     condition: "Mint",
     authenticity: "Certified",
+    category: "Books",
   },
   {
     name: "First Edition of The Great Gatsby",
@@ -35,6 +36,7 @@ collectible_attributes = [
     description: "An original first edition of F. Scott Fitzgerald's The Great Gatsby.",
     condition: "Very Good",
     authenticity: "Certified",
+    category: "Books",
   },
   {
     name: "Signed Copy of To Kill a Mockingbird",
@@ -43,6 +45,7 @@ collectible_attributes = [
     description: "A rare signed edition of Harper Lee's To Kill a Mockingbird.",
     condition: "Mint",
     authenticity: "Certified",
+    category: "Books",
   },
   {
     name: "Original Charizard Pokémon Card",
@@ -51,6 +54,7 @@ collectible_attributes = [
     description: "Highly coveted Charizard Pokémon card in near-perfect condition.",
     condition: "Near Mint",
     authenticity: "Certified",
+    category: "Cards",
   },
   {
     name: "Black Lotus - Alpha Edition",
@@ -59,6 +63,7 @@ collectible_attributes = [
     description: "The Alpha edition Black Lotus, renowned for its rarity and power in the game of Magic: The Gathering.",
     condition: "Near Mint",
     authenticity: "Certified",
+    category: "Cards",
   },
   {
     name: "Pikachu Illustrator Card",
@@ -67,6 +72,7 @@ collectible_attributes = [
     description: "One of the rarest Pokémon cards ever made, awarded to winners of the 1998 CoroCoro Comic Illustration Contest.",
     condition: "Mint",
     authenticity: "Certified",
+    category: "Cards",
   },
   {
     name: "18th Century Sapphire Gem",
@@ -75,6 +81,7 @@ collectible_attributes = [
     description: "A stunning sapphire gem from the 18th century, with verified authenticity.",
     condition: "Good",
     authenticity: "Verified",
+    category: "Gems",
   },
   {
     name: "Rare Ruby - The Sunrise Ruby",
@@ -83,6 +90,7 @@ collectible_attributes = [
     description: "The Sunrise Ruby, a rare and stunning gem known for its deep red color.",
     condition: "Excellent",
     authenticity: "Verified",
+    category: "Gems",
   },
   {
     name: "Exceptional Emerald - The Mogul Mughal",
@@ -91,6 +99,7 @@ collectible_attributes = [
     description: "The Mogul Mughal Emerald, one of the largest emeralds with historical significance.",
     condition: "Good",
     authenticity: "Verified",
+    category: "Gems",
   },
 ]
 

@@ -15,6 +15,7 @@ RSpec.describe Collectible, type: :model do
       description: "A rare, mint condition Superman comic from 1938.",
       condition: "Mint",
       authenticity: "Certified",
+      category: "Books",
     )
     expect(collectible.errors[:name]).to include("can't be blank")
   end
@@ -26,6 +27,7 @@ RSpec.describe Collectible, type: :model do
       description: "A rare, mint condition Superman comic from 1938.",
       condition: "Mint",
       authenticity: "Certified",
+      category: "Books",
     )
     expect(collectible.errors[:price]).to include("can't be blank")
   end
@@ -37,6 +39,7 @@ RSpec.describe Collectible, type: :model do
       description: "A rare, mint condition Superman comic from 1938.",
       condition: "Mint",
       authenticity: "Certified",
+      category: "Books",
     )
     expect(collectible.errors[:image]).to include("can't be blank")
   end
@@ -48,6 +51,7 @@ RSpec.describe Collectible, type: :model do
       image: "http://tinyurl.com/3zps2pnz",
       condition: "Mint",
       authenticity: "Certified",
+      category: "Books",
     )
     expect(collectible.errors[:description]).to include("can't be blank")
   end
@@ -59,6 +63,7 @@ RSpec.describe Collectible, type: :model do
       image: "http://tinyurl.com/3zps2pnz",
       description: "A rare, mint condition Superman comic from 1938.",
       authenticity: "Certified",
+      category: "Books",
     )
     expect(collectible.errors[:condition]).to include("can't be blank")
   end
@@ -70,7 +75,20 @@ RSpec.describe Collectible, type: :model do
       image: "http://tinyurl.com/3zps2pnz",
       description: "A rare, mint condition Superman comic from 1938.",
       condition: "Mint",
+      category: "Books",
     )
     expect(collectible.errors[:authenticity]).to include("can't be blank")
+  end
+
+  it 'should validate category' do
+    collectible = user.collectibles.create(
+      name: "Vintage Superman Comic",
+      price: "570,000",
+      image: "http://tinyurl.com/3zps2pnz",
+      description: "A rare, mint condition Superman comic from 1938.",
+      condition: "Mint",
+      authenticity: "Certified",
+    )
+    expect(collectible.errors[:category]).to include("can't be blank")
   end
 end

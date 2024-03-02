@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :collectibles
+  resources :collectibles, only: [:index, :create, :update, :destroy]
   devise_for :users,
     path: '',
     path_names: {
