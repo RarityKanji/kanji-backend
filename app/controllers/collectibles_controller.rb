@@ -1,7 +1,11 @@
 class CollectiblesController < ApplicationController
     def index
+      if params[:category]
+        collectibles = Collectible.where(category: params[:category])
+      else
         collectibles = Collectible.all
-        render json: collectibles
+      end
+      render json: collectibles
     end
     
     def create
@@ -31,6 +35,6 @@ class CollectiblesController < ApplicationController
 
       private
       def collectible_params
-        params.require(:collectible).permit(:name, :price, :image, :description, :condition, :authenticity, :user_id)
+        params.require(:collectible).permit(:name, :price, :image, :description, :condition, :authenticity, :category, :user_id)
       end
 end
