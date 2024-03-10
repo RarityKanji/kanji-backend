@@ -25,9 +25,10 @@ class CollectiblesController < ApplicationController
     
     def destroy
         collectible = Collectible.find(params[:id])
-        collectible.destroy
-        head :no_content
-      end
+        if collectible.destroy
+          render json: collectible
+        end
+    end
 
       private
       def collectible_params
