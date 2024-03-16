@@ -12,7 +12,7 @@ users = [
   { email: "trader@example.com", password: "password", password_confirmation: "password" },
   { email: "investor@example.com", password: "password", password_confirmation: "password" }
 ]
-
+# user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
 users.each do |user_attributes|
   User.create!(user_attributes)
 end
@@ -103,10 +103,8 @@ collectible_attributes = [
   },
 ]
 
-# Dynamically assign collectibles to users with an updated comment for clarity
 users = User.all
 collectible_attributes.each do |attributes|
-  # Ensures a diverse and realistic distribution of collectibles among users, simulating the varied inventory found on commercial e-commerce platforms.
   user = users.sample
   user.collectibles.create!(attributes)
 end
